@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>BrrgrrRestarant</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/plugins/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <style>
+            body {font-family: Arial, Helvetica, sans-serif;}
+            
+            /* Full-width input fields */
+            input[type=text], input[type=password] {
+                background: #f0f0f0;
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: inset 8px 8px 16px #d9d9d9, inset -8px -8px 16px #ffffff;
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;           
+            }
+            
+            /* Set a style for all buttons */
+            .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-button {
+    background: #007BFF; /* Change the button background color here */
+    color: #fff; /* Change the button text color here */
+    width: 150px; /* Set the button width */
+    height: 40px; /* Set the button height */
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+.login-button:hover {
+    background: #0056b3; /* Change the button background color on hover */
+}
+
+.signup-link {
+    text-align: center;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+            
+            button:hover {
+              opacity: 0.8;
+              background: #e0e0e0;
+            }
+            
+            /* Extra styles for the cancel button */
+            .cancelbtn {
+              width: auto;
+              padding: 10px 18px;
+              background-color: #1a050e;
+            }
+            
+            /* Center the image and position the close button */
+            .imgcontainer {
+              text-align: center;
+              margin: 24px 0 12px 0;
+              position: relative;
+              background-image: url("assets\images\new\login.png");
+            }
+            
+            img.avatar {
+              width: 10%;
+              height: 50%;
+              border-radius: 50%;
+            }
+            
+            .container {
+              padding: 15px;
+              height: 10 0%;
+              
+            }
+            
+
+            
+            span.psw {
+              float: right;
+              padding-top: 1px;
+            }
+           
+            
+            /* The Modal (background) */
+            .modal {
+              display: none; /* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              left: 0;
+              top: 0;
+              align-items: center;
+              width: 100%; /* Full width */
+              height: 100%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+              padding-top: 10px;
+              
+            }
+            
+            /* Modal Content/Box */
+            .modal-content {
+              background-color: #eae8e8;
+              margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+              border: 1px solid #888;
+              width: 50%;
+              height: 55%;
+          
+            /* Could be more or less, depending on screen size */
+            }
+            .modal-content .container .log-btn{
+                box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #ffffff;
+            }
+            
+            /* The Close Button (x) */
+            .close {
+              position: absolute;
+              right: 25px;
+              top: 0;
+              color: black;
+              font-size: 35px;
+              font-weight: bold;
+            }
+            .form-container {
+  max-width: 450px;
+  margin: 0 auto;
+}
+            
+            .close:hover,
+            .close:focus {
+              color: rgb(23, 160, 64);
+              cursor: pointer;
+            }
+            
+            /* Add Zoom Animation */
+            .animate {
+              -webkit-animation: animatezoom 0.6s;
+              animation: animatezoom 0.6s
+            }
+            
+            @-webkit-keyframes animatezoom {
+              from {-webkit-transform: scale(0)} 
+              to {-webkit-transform: scale(1)}
+            }
+              
+            @keyframes animatezoom {
+              from {transform: scale(0)} 
+              to {transform: scale(1)}
+            }
+            
+            /* Change styles for span and cancel button on extra small screens */
+            @media screen and (max-width: 300px) {
+              span.psw {
+                 display: block;
+                 float: none;
+              }
+              .signup {
+                display: block;
+                 float: none;
+              }
+            }
+            </style>
+            <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
+                
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+                </script>
+       
+    </head>
+    <!-- =================Body Started==================== -->
+    <body>
+        <!-- *********************************************************** -->
+        <!-- //////////////////////header-started/////////////////////// -->
+        <header>
+            <nav class="main-nav">
+                <span class="hamburger">menu</span>
+               <div class="logo">
+                   <img src="assets/images/logo/logo1.png">
+               </div>
+               <div class="menu-toggle">
+                   <i class="fal fa-bars"></i>
+               </div>
+                <div class="menu">
+                    <ul>
+                       
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                       
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <button onclick="document.getElementById('id01').style.display='block'" class="login-btn">Login</button>            
+                            </ul>
+                    
+                    
+                </div>
+             
+            </nav>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="login.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="assets\images\new\login.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="input-container">
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label>
+        <input type="checkbox" name="remember"> Remember me
+      </label>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+
+     <div class="button-container">
+            <button class="neumorphic-button login-button ">Login</button>
+            <p class="signup-link">Don't have an account? <a href="signin.html">Sign Up</a></p>
+        </div>
+     
+
+     
+    </div>
+ 
+  </form>
+<!-- FORM FOOTER -->
+
+</div>
+
+
+</header>
+     
+        <!-- //////////////////////header-End/////////////////////// -->
+        <!-- ====================================================== -->
+        <!-- //////////////////////Main-Started/////////////////////// -->
+        <main>
+            <section class="slider">
+                <div class="shap"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="wrapper">
+                                <div class="content">
+                                    <h1>The Best burger for burger showcase</h1>
+                                    
+                                    <ol>
+                                        <li><a href="contact-us.html">Contact Us</a></li>
+                                        <li><a href="#">Read More</a></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="wrapper">
+                                <div class="image">
+                                    <img src="assets/images/banner/1.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ================================================================= -->
+            <section class="bg-01">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="wrapper">
+                                <div class="content">
+                                    <ol>
+                                        <li><img src="assets/images/abt/1.jpg"></li>
+                                         <li><img src="assets/images/abt/2.jpg"></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="wrapper">
+                                <div class="content">
+                                    <h5>Welcome at</h5>
+                                    <h2>Brrgrr restaurant</h2>
+                                    <p>History of Burger</p>
+                                      <p>In Wisconsin, many claim the burger was invented by Charlie Nagreen,
+                                           who purportedly sold a meatball between two slices of bread at an 1885 fair in Seymour.
+                                            In Athens, Tex., the title of “hamburger creator” is bestowed upon Fletcher Davis,
+                                             who supposedly came up with it in the 1880s. Other burger origin stories can be found in New York,
+                                              Oklahoma and elsewhere, but they lack documentation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="offer-01">
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-12">
+                             <div class="heading">
+                                 <h2>Our Daily<span>Offers</span></h2>
+                             </div>
+                         </div>
+                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                             <div class="wrapper">
+                                 <div class="image">
+                                     <img src="assets/images/abt/bur.jpg">
+                                     <div class="inner-content">
+                                         <ol>
+                                             <li>
+                                                 <h6>Lunch time</h6>
+                                                 <h3>20% <span>off</span></h3>
+                                                 <p>we love food,lots of different and food,
+                                                 just like you</p>
+                                                 <a href="signin.html">Order Now</a>
+                                             </li>
+                                         </ol>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                             <div class="wrapper">
+                                 <div class="content">
+                                     <ol>
+                                        <li>
+                                            <img src="assets/images/abt/double.jpg">
+                                            <h4>Double Burger<span>Rs.707</span></h4>
+                                            <p>Tucked in between three soft buns are two all-beef patties, cheddar cheese, ketchup,
+                                                 onion, pickles and iceberg lettuce.</p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/abt/bacon.jpg">
+                                            <h4>Bacon Burger<span>Rs.665</span></h4>
+                                            <p> The burgers are flavored with simple seasonings along with chopped onion and Worcestershire sauce.</p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/abt/king.jpg">
+                                            <h4>King burger<span>Rs.915</span></h4>
+                                            <p>Pork, chicken and vegetable fried rolls served with 
+                                            lettuce wraps</p>
+                                        </li>
+                                        <li>
+                                           <img src="assets/images/abt/black.jpg">
+                                           <h4>Black burger<span>Rs.915</span></h4>
+                                           <p>The buns and the cheese of the hamburger are colored black with bamboo charcoal.</p>
+                                       </li>
+                                     </ol>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+            </section>
+            <!-- ====================================================== -->
+            
+            <!-- ====================================================== -->
+            
+            <!-- ====================================================== -->
+            <section class="bg-05">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="heading">
+                                <h2>Explore Our Team</h2>
+                            </div>
+                        </div>
+
+                        <div class="main-team-card d-flex">
+                            <div class="team-setup">
+                                <div class="team-items">
+                                    <div class="team-user">
+                                    <img src="assets/images/team/1.jpg">
+                                    </div>
+                                    <div class="team-name">
+                                    <h2>Mark Anthony</h2>
+                                    <b>Founder & CEO</b>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="team-setup">
+                                <div class="team-items">
+                                    <div class="team-user">
+                                    <img src="assets/images/team/2.jpg">
+                                    </div>
+                                    <div class="team-name">
+                                    <h2>Jessica Lee</h2>
+                                    <b>Chinese Kitchen Lead</b>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="team-setup">
+                                <div class="team-items">
+                                    <div class="team-user">
+                                    <img src="assets/images/team/3.jpg">
+                                    </div>
+                                    <div class="team-name">
+                                    <h2>John Bennett</h2>
+                                    <b>French Kitchen Lead</b>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="team-setup">
+                                <div class="team-items">
+                                    <div class="team-user">
+                                    <img src="assets/images/team/4.jpg">
+                                    </div>
+                                    <div class="team-name">
+                                    <h2>ANDERSON JHON</h2>
+                                    <b>Sous Chef</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- //////////////////////Main-End/////////////////////// -->
+        <!-- ====================================================== -->
+        <!-- //////////////////////Footer-Started/////////////////////// -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="wrapper">
+                            <h3><img src="assets/images/logo/logo1.png"></h3>
+                            <p>One cannot think well, love well, sleep well, if one has not dined well.</p>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Enter Your Email" role="text" name="email" type="email">
+                                <i class="fal fa-envelope-open"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="wrapper">
+                            <h2>Usefull Links</h2>
+                            <div class="content">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="about-us.html">Menu</a></li>
+                                 
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="wrapper">
+                            <h2> Opening Time</h2>
+                            <div class="content">
+                                <ul class="d-flex se">
+                                    <li><a>Monday</a>
+                                        <span>8 AM &nbsp;-&nbsp; 10 PM</span>
+                                    </li>
+                                    <li><a>Tuseday</a>
+                                        <span>8 AM &nbsp;-&nbsp; 10 PM</span>
+                                    </li>
+                                    <li><a>Wednesday</a>
+                                        <span>8 AM &nbsp;-&nbsp; 10 PM</span>
+                                    </li>
+                                    <li><a>Thursday</a>
+                                        <span>8 AM &nbsp;-&nbsp; 10 PM</span>
+                                    </li>
+                                    <li><a>Friday</a>
+                                        <span>8 AM &nbsp;-&nbsp; 10 PM</span>
+                                    </li>
+                                    <li><a>Saturday</a>
+                                        <span>8 AM &nbsp;-&nbsp; 10 PM</span>
+                                    </li>
+                                    <li><a>Sunday</a>
+                                        <span>8 AM &nbsp;-&nbsp; 10 PM</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="copy-right">
+            <div class="container">
+                <div class="row">
+                    
+                </div>
+            </div>
+        </div>
+        <!-- *********************************************************** -->
+    </body>
+    <!-- =================Body End==================== -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/owl.carousel.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</html>
